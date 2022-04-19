@@ -1,3 +1,11 @@
+---
+title: "【python】matplotlib便利技まとめ"
+emoji: "🔥"
+type: "tech" # tech: 技術記事 / idea: アイデア
+topics: ["python", "matplotlib"]
+published: false
+---
+
 #
 https://hack-note.com/infra/docker-about/
 - [text](https://hack-note.com/python-matplotlib-multiple-graphs)
