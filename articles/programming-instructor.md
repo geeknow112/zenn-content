@@ -16,6 +16,16 @@ published: false
 - [Code Camp（コードキャンプ株式会社）](https://af.moshimo.com/af/c/click?a_id=2612486&p_id=936&pc_id=1196&pl_id=14835&guid=ON)
 - [TechAcademy（キラメックス株式会社）](https://af.moshimo.com/af/c/click?a_id=2612475&p_id=1555&pc_id=2816&pl_id=22706&url=https%3A%2F%2Ftechacademy.jp%2Fhtmlcss-trial%3Futm_source%3Dmoshimo%26utm_medium%3Daffiliate%26utm_campaign%3Dtextad)
 
+### 条件比較
+|  | SAMURAI | Code Camp | TechAcademy |
+| ---- | ---- | ---- | ---- |
+| 仕事内容 |  |  |  |
+| 授業形式 |  |  |  |
+| 労働時間 |  |  |  |
+| 報酬 | 時給2000円～（業務委託） | 1800-2400円/1レッスン | 要相談 |
+| 募集条件 |  |  |  |
+| おススメ条件 |  |  |  |
+
 https://hack-note.com/programming-schools/
 
 ## 6 未経験からプログラミング講師になれるスクール・教室3選
