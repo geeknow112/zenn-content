@@ -11,8 +11,11 @@ published: false
 
 この記事では、こういった悩みをお持ちのシステムエンジニアやプログラマーの経験者、または現役の方を対象に、回答します。
 
-## 副業でプログラミング講師ができるスクール・教室4選
-https://lp.sejuku.net/lp_inh_02/?cid=moshimo&acid=moshimo&utm_source=moshimo&utm_medium=affiliate&utm_campaign=normal&argument=Voc114wW&dmai=a603471aeeb215&maf=1421_2612477.21248.0..1739263857.1650552485
+## 副業でプログラミング講師ができるスクール・教室3選
+- [SAMURAI ENGINEER（株式会社SAMURAI）](https://lp.sejuku.net/lp_inh_02/?cid=moshimo&acid=moshimo&utm_source=moshimo&utm_medium=affiliate&utm_campaign=normal&argument=Voc114wW&dmai=a603471aeeb215&maf=1421_2612477.21248.0..1739263857.1650552485)
+- [Code Camp（コードキャンプ株式会社）](https://af.moshimo.com/af/c/click?a_id=2612486&p_id=936&pc_id=1196&pl_id=14835&guid=ON)
+- [TechAcademy（キラメックス株式会社）](https://af.moshimo.com/af/c/click?a_id=2612475&p_id=1555&pc_id=2816&pl_id=22706&url=https%3A%2F%2Ftechacademy.jp%2Fhtmlcss-trial%3Futm_source%3Dmoshimo%26utm_medium%3Daffiliate%26utm_campaign%3Dtextad)
+
 https://hack-note.com/programming-schools/
 
 ## 6 未経験からプログラミング講師になれるスクール・教室3選
