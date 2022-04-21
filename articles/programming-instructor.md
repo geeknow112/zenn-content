@@ -3,7 +3,7 @@ title: "副業でプログラミング講師！実際に始めるまでにやっ
 emoji: "☺️"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["副業", "プログラミング", "講師", "未経験"]
-published: false
+published: true
 ---
 
 - 副業でプログラミング講師の仕事ができるスクールってどこかあるかな？
