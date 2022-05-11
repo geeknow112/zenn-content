@@ -1,5 +1,5 @@
 ---
-title: "Play To Earn(P2E)の最も稼げる！TITAN HUNTERSの始め方"
+title: "【Play To Earn(P2E)】 仮想通貨が最も稼げる！TITAN HUNTERSの始め方"
 emoji: "💎"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["副業", "Play To Earn", "TITAN HUNTERS", "TITA", "仮想通貨"]
