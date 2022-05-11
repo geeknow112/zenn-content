@@ -27,6 +27,9 @@ TITAN HUNTERSというNFTゲームが稼げる上に、面白い。稼げても�
 ゲーム内の通貨は仮想通貨のTITAなので、相場による価格変動があります。
 相場の確認も怠らずにやりましょう。
 
+仮想通貨を稼ぎ始めるには事前に下記の手順が必要です。
+https://cashhack.hatenablog.com/entry/play-to-earn-titan-hunters
+
 ## TITAN HUNTERS 始め方
 ずっとスマホで遊ぶのは疲れるのでここではエミュレータを使って遊びます。
 ### エミュレータはPCを選ぶ。。。
