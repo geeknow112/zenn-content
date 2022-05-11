@@ -8,17 +8,17 @@ published: true
 
 TITAN HUNTERSというNFTゲームが稼げる上に、面白い。稼げてもつまらないゲームだと続けられないですよね。ここでは基本的な始め方から、稼ぐ方法までわかりやすくまとめて紹介します。
 
-## TITAN HUNTERSとは
+# TITAN HUNTERSとは
 - NFTゲーム(GameFi、P2E)である。
 - 仮想通貨ゲームの中ではアクション性が高く面白いという稀有な存在。
 - プレイしながら実際にお金を稼げる。
 ‐ シューティングゲーム
 - モバイル専用(Android、iOS)
 
-### PCで遊びたい方用、Androidエミュレータ
+## PCで遊びたい方用、Androidエミュレータ
 - [NoxPlayer](https://jp.bignox.com/)
 
-## TITAN HUNTERS 稼ぎ方
+# TITAN HUNTERS 稼ぎ方
 以下の方法で稼ぐことができます。
 1. (有料)「NFT装備専用」のガチャを装着して敵を倒す。
 2. ゲーム内で入手した「non-NFT装備」に一定の課金をして、NFT装備に変えて装着して、敵を倒す。
@@ -30,16 +30,16 @@ TITAN HUNTERSというNFTゲームが稼げる上に、面白い。稼げても�
 仮想通貨を稼ぎ始めるには事前に下記の手順が必要です。
 https://cashhack.hatenablog.com/entry/play-to-earn-titan-hunters
 
-## TITAN HUNTERS 始め方
+# TITAN HUNTERS 始め方
 ずっとスマホで遊ぶのは疲れるのでここではエミュレータを使って遊びます。
-### エミュレータはPCを選ぶ。。。
+## エミュレータはPCを選ぶ。。。
 エミュレータの動作が芳しくなく、保有しているPCで試したら、起動したのは4台中1台のみ。
 VTが使えることが前提で、入ってないPCはまず使えません。
 
-### エミュレータで遊ぶ場合のコントローラー
+## エミュレータで遊ぶ場合のコントローラー
 
-## TITAN HUNTERS 遊び方
+# TITAN HUNTERS 遊び方
 
-## TITAN HUNTERS 攻略方法
+# TITAN HUNTERS 攻略方法
 
-## TITAN HUNTERS 用語
+# TITAN HUNTERS 用語
