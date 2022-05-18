@@ -3,7 +3,7 @@ title: "【確定申告】 意地でも電子申請してみる！"
 emoji: "🌌"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["法人税", "確定申告", "電子証明書", "申請", "起業"]
-published: false
+published: public
 ---
 
 # eltax 利用者ID 取得
@@ -25,3 +25,7 @@ https://www.moj.go.jp/MINJI/minji06_00028.html#04
 
 ## 「申請用総合ソフト」
 https://www.rsmay.com/online_sin/souzoku/body12.html
+
+## 公的個人認証サービス
+### 「申請用総合ソフト」で"署名付与"する際のマイナンバーから電子証明書ファイルを作る
+https://www.jpki.go.jp/download/howto_win/certificate_p02.html
