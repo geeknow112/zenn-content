@@ -44,6 +44,7 @@ TITAN HUNTERSをプレイに必須のバイナンス特有の仮想通貨BNB（�
 ### 2.6. 認証審査
 
 ## 3. ログイン
+![](https://storage.googleapis.com/zenn-user-upload/a5bc000e44aa-20220523.png)
 初回のログインは、下記2つ、それぞれに認証コードが必要になるので、両方とも入力しましょう！
 - SMS
 - メール
