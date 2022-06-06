@@ -1,201 +1,200 @@
 ---
-title: "WordPressの記事投稿をSQLでやる方法"
+title: "WordPressの記事投稿をSQLでやる方法、に「All in One SEO」要素も追加で。"
 emoji: "💎"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["WordPress", "SQL"]
+topics: ["WordPress", "SQL", "All in One SEO", "SEO"]
 published: true
 ---
 
 # はじめに
-WordPressを使って記事を投稿していると、
-管理画面の細かい部分で改善したいところが出てくると思います。
-ぼくが作業してて改善したいと思った点は下記です。
+https://zenn.dev/gk12/articles/wordpress-post-with-sql
+この記事の続きで、SQLによる投稿をするときに、
+SEO要素も追加でワンライナーで投稿したいという要件について考察します。
 
 ## 改善したい点
-- エディタが使いにくい
-- 投稿の要素を一箇所にまとめたい（入力箇所が多い）
-- プラグインで解決したくない（プラグインを探すのが面倒）
-- テンプレートを強化したい
-- 作業を自動化したい
+- 「All in One SEO」の要素をいちいち埋めるのが面倒
 
-結局、管理画面にログインして、いろいろ設定して、やっとの思いで投稿しているので、
-習慣化の妨げになってます。
-このあたりをクリアにしてできるだけ投稿作業を簡素化していきます。
+SEO対策で有名なプラグイン「All in One SEO」。
+WordPressユーザーならデフォルトで使ってるかと思います。
+ただ、やはり登録要素を埋めるのが面倒なので、
+SQLによるワンライナーでの効率化を図ります。
 
 # この記事でできるようになること
-この記事では、「投稿の要素を一箇所にまとめたい」という要件にフォーカスして、これを改善します。
+この記事では、【「All in One SEO」の要素を埋める作業を効率化したい】という要件にフォーカスして、これを改善します。
 最終的には、SQLのワンライナーでWordPressへの投稿を目指します。
 
-# WordPressの記事投稿の仕組み
-まず、WordPressの投稿の仕組みは下記のようになっています。
-1. 管理画面で必要項目を入力して、「公開」ボタンをクリックする。
-2. 入力されたテキスト情報を、「wp_posts」テーブルにINSERT。
-以上。
+# 「All in One SEO」の要素登録の仕組み
+「All in One SEO」の各要素もWordPressの仕組みに則って、
+データベースに保存される仕組みになっています。
 
-つまり、「wp_posts」テーブルにSQL文で直接INSERTすれば、
+つまり、「wp_posts」テーブルに投稿した記事のIDに紐づく
+「All in One SEO」の要素フィールドに、SQLで値をUPDATEすることで、
 管理画面をスキップして投稿可能です。
 
-「wp_postmeta」テーブルとか、投稿に関係してそうに思えるテーブルも
-シンプルな記事投稿のみなら不要ですが、
-SEO関連の情報もワンライナー化したい場合、追加が必要なので、
-それは別記事で解説します。
+前回の記事で保留にした「wp_aioseo_posts」テーブルが、
+要素を格納しているテーブルになります。
 
-# WordPressの記事投稿用SQL
+WordPressでは「All in One SEO」以外でも同じ手法で
+「wp_postmeta」に要素フィールドを追加することで、
+記事IDに紐づけていろいろ情報を保持していける構造になっています。
+
+# 「All in One SEO」の記事投稿用SQL
 では、ここからは実際にSQLを考えていきます。
 
-## INSERT先の「wp_posts」テーブル
-WordPressのデータベースにアクセスして、wp_postsテーブルの構造を確認します。
+## UPDATEする「wp_aioseo_posts」テーブル
+WordPressのデータベースにアクセスして、wp_aioseo_postsテーブルの構造を確認します。
 
 ```
-mysql> desc wp_posts;
-+-----------------------+-----------------+------+-----+---------------------+----------------+
-| Field                 | Type            | Null | Key | Default             | Extra          |
-+-----------------------+-----------------+------+-----+---------------------+----------------+
-| ID                    | bigint unsigned | NO   | PRI | NULL                | auto_increment |
-| post_author           | bigint unsigned | NO   | MUL | 0                   |                |
-| post_date             | datetime        | NO   |     | 0000-00-00 00:00:00 |                |
-| post_date_gmt         | datetime        | NO   |     | 0000-00-00 00:00:00 |                |
-| post_content          | longtext        | NO   |     | NULL                |                |
-| post_title            | text            | NO   |     | NULL                |                |
-| post_excerpt          | text            | NO   |     | NULL                |                |
-| post_status           | varchar(20)     | NO   |     | publish             |                |
-| comment_status        | varchar(20)     | NO   |     | open                |                |
-| ping_status           | varchar(20)     | NO   |     | open                |                |
-| post_password         | varchar(255)    | NO   |     |                     |                |
-| post_name             | varchar(200)    | NO   | MUL |                     |                |
-| to_ping               | text            | NO   |     | NULL                |                |
-| pinged                | text            | NO   |     | NULL                |                |
-| post_modified         | datetime        | NO   |     | 0000-00-00 00:00:00 |                |
-| post_modified_gmt     | datetime        | NO   |     | 0000-00-00 00:00:00 |                |
-| post_content_filtered | longtext        | NO   |     | NULL                |                |
-| post_parent           | bigint unsigned | NO   | MUL | 0                   |                |
-| guid                  | varchar(255)    | NO   |     |                     |                |
-| menu_order            | int             | NO   |     | 0                   |                |
-| post_type             | varchar(20)     | NO   | MUL | post                |                |
-| post_mime_type        | varchar(100)    | NO   |     |                     |                |
-| comment_count         | bigint          | NO   |     | 0                   |                |
-+-----------------------+-----------------+------+-----+---------------------+----------------+
-23 rows in set (0.00 sec)
+mysql> desc wp_aioseo_posts;
++-----------------------------+-----------------+------+-----+---------+----------------+
+| Field                       | Type            | Null | Key | Default | Extra          |
++-----------------------------+-----------------+------+-----+---------+----------------+
+| id                          | bigint unsigned | NO   | PRI | NULL    | auto_increment |
+| post_id                     | bigint unsigned | NO   | MUL | NULL    |                |
+| title                       | text            | YES  |     | NULL    |                |
+| description                 | text            | YES  |     | NULL    |                |
+| keywords                    | mediumtext      | YES  |     | NULL    |                |
+| keyphrases                  | longtext        | YES  |     | NULL    |                |
+| page_analysis               | longtext        | YES  |     | NULL    |                |
+| canonical_url               | text            | YES  |     | NULL    |                |
+| og_title                    | text            | YES  |     | NULL    |                |
+| og_description              | text            | YES  |     | NULL    |                |
+| og_object_type              | varchar(64)     | YES  |     | default |                |
+| og_image_type               | varchar(64)     | YES  |     | default |                |
+| og_image_url                | text            | YES  |     | NULL    |                |
+| og_image_width              | int             | YES  |     | NULL    |                |
+| og_image_height             | int             | YES  |     | NULL    |                |
+| og_image_custom_url         | text            | YES  |     | NULL    |                |
+| og_image_custom_fields      | text            | YES  |     | NULL    |                |
+| og_video                    | varchar(255)    | YES  |     | NULL    |                |
+| og_custom_url               | text            | YES  |     | NULL    |                |
+| og_article_section          | text            | YES  |     | NULL    |                |
+| og_article_tags             | text            | YES  |     | NULL    |                |
+| twitter_use_og              | tinyint(1)      | YES  |     | 0       |                |
+| twitter_card                | varchar(64)     | YES  |     | default |                |
+| twitter_image_type          | varchar(64)     | YES  |     | default |                |
+| twitter_image_url           | text            | YES  |     | NULL    |                |
+| twitter_image_custom_url    | text            | YES  |     | NULL    |                |
+| twitter_image_custom_fields | text            | YES  |     | NULL    |                |
+| twitter_title               | text            | YES  |     | NULL    |                |
+| twitter_description         | text            | YES  |     | NULL    |                |
+| seo_score                   | int             | NO   |     | 0       |                |
+| schema_type                 | varchar(20)     | YES  |     | default |                |
+| schema_type_options         | longtext        | YES  |     | NULL    |                |
+| pillar_content              | tinyint(1)      | YES  |     | NULL    |                |
+| robots_default              | tinyint(1)      | NO   |     | 1       |                |
+| robots_noindex              | tinyint(1)      | NO   |     | 0       |                |
+| robots_noarchive            | tinyint(1)      | NO   |     | 0       |                |
+| robots_nosnippet            | tinyint(1)      | NO   |     | 0       |                |
+| robots_nofollow             | tinyint(1)      | NO   |     | 0       |                |
+| robots_noimageindex         | tinyint(1)      | NO   |     | 0       |                |
+| robots_noodp                | tinyint(1)      | NO   |     | 0       |                |
+| robots_notranslate          | tinyint(1)      | NO   |     | 0       |                |
+| robots_max_snippet          | int             | YES  |     | NULL    |                |
+| robots_max_videopreview     | int             | YES  |     | NULL    |                |
+| robots_max_imagepreview     | varchar(20)     | YES  |     | large   |                |
+| tabs                        | mediumtext      | YES  |     | NULL    |                |
+| images                      | longtext        | YES  |     | NULL    |                |
+| image_scan_date             | datetime        | YES  |     | NULL    |                |
+| priority                    | tinytext        | YES  |     | NULL    |                |
+| frequency                   | tinytext        | YES  |     | NULL    |                |
+| videos                      | longtext        | YES  |     | NULL    |                |
+| video_thumbnail             | text            | YES  |     | NULL    |                |
+| video_scan_date             | datetime        | YES  |     | NULL    |                |
+| location                    | text            | YES  |     | NULL    |                |
+| local_seo                   | longtext        | YES  |     | NULL    |                |
+| limit_modified_date         | tinyint(1)      | NO   |     | 0       |                |
+| created                     | datetime        | NO   |     | NULL    |                |
+| updated                     | datetime        | NO   |     | NULL    |                |
++-----------------------------+-----------------+------+-----+---------+----------------+
+57 rows in set (0.00 sec)
 ```
 
+wp_posts.ID = wp_aioseo_posts.post_idで紐づけて、
+wp_aioseo_postsのフィールドにSEO要素を登録していく感じです。
 
-主な注意点は下記です。
-
-## ID
-auto_incrementなので、NULLをINSERTしたら連番が付与されます。
-INSERT文ではNULLに設定しましょう。
-
-## post_content
-post_contentフィールドが投稿文章を入れるカラムです。
-markdownのエディタプラグインを入れてても、
-ここでmarkdown表記がHTMLに変換されるわけではないので、
-普通にHTMLで入力しましょう。
-
-そのうちmarkdownをSQLに変換するプログラムを作りたいと思います。
-
-## post_status
-記事公開するかどうかの判定値です。「publish」とすることで公開状態でINSERTします。
-
-## post_name
-パーマリンクのフィールドです。わかりやすいURLを付けておきましょう。
-個人的には管理画面からの投稿でこれが一番面倒な作業でした。
-SQL化しておけば先々の一括変更も容易です。
-
-## post_type
-投稿か固定ページかの判定値です。投稿の場合「post」、固定ページの場合「page」に設定します。
-
-# サンプルSQL
-わかりやすいようにフィールド名をコメントに入れてINSERT文を作成しました。
+### 注意
+wp_postmetaテーブルにもそれらしいフィールドが生成されますが、
+こちらは使われてなさそうです。
+「_aioseo_***」というそれらしいmeta_keyがあるので、
+試しにmeta_value値を変えてみましたが、サイトに反映されず、でした。
 
 ```
-INSERT INTO
-# テーブル名
-  `wp_posts`
-VALUES
-  (
-# ID (auto_incrementなのでnull)
-    null,
-# post_author
-    1,
-# post_date
-    current_timestamp,
-# post_date_gmt
-    (current_timestamp - interval 9 hour),
-# post_content
-    '<h2>WordPressの記事投稿をSQLでやる方法</h2>\r\n<p>SAMPLE</p>',
-# post_title
-    'WordPressの記事投稿をSQLでやる方法',
-# post_excerpt
-    'WordPressの記事投稿をSQLでやる方法',
-# post_status
-    'publish',
-# comment_status
-    'close',
-# ping_status
-    'open',
-# post_password
-    '',
-# post_name
-    'wordpress-post-with-sql',
-# to_ping
-    '',
-# pinged
-    '',
-# post_modified
-    current_timestamp,
-# post_modified_gmt
-    (current_timestamp - interval 9 hour),
-# post_content_filtered
-    '',
-# post_parent
-    0,
-# guid
-    '',
-# menu_order
-    0,
-# post_type
-    'post',
-# post_mime_type
-    '',
-# comment_count
-    0
-  );
+mysql> select * from wp_postmeta where post_id = '10601';
++---------+---------+---------------------------------------+-----------------------------------------------------+
+| meta_id | post_id | meta_key                              | meta_value                                          |
++---------+---------+---------------------------------------+-----------------------------------------------------+
+|  104377 |   10601 | _aioseo_title                         | NULL                                                |
+|  104378 |   10601 | _aioseo_description                   | NULL                                                |
+|  104379 |   10601 | _aioseo_keywords                      |                                                     |
+|  104380 |   10601 | _aioseo_og_title                      | NULL                                                |
+|  104381 |   10601 | _aioseo_og_description                | NULL                                                |
+|  104382 |   10601 | _aioseo_og_article_section            |                                                     |
+|  104383 |   10601 | _aioseo_og_article_tags               |                                                     |
+|  104384 |   10601 | _aioseo_twitter_title                 | NULL                                                |
+|  104385 |   10601 | _aioseo_twitter_description           | NULL                                                |
++---------+---------+---------------------------------------+-----------------------------------------------------+
 ```
 
-# WordPressへの自動投稿方法
-サンプルSQLをINSERT.sqlとして保存した上で、下記のコマンドを実行します。
+試しにmeta_key = '_aioseo_description'の値を変更。
 ```
-mysql -u root -p -h localhost wordpress < INSERT.sql
+mysql> update wp_postmeta set meta_value = 'sample description' where post_id = '10808' and meta_key = '_aioseo_description';
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
 ```
-rootユーザーでlocalhostのwordpressデータベースにINSERT.sqlを流し込んでいます。
-ここではサンプルでファイル名をINSERT.sqlとしていますが、
-日付ファイル(例：20220604.sql)や、
-パーマリンク名(例：wordpress-post-with-sql.sql)などを用いると
-管理しやすくなりおススメです。
 
-## SQLでINSERTした記事画面
+```
+mysql> select * from wp_postmeta where post_id = '10808';
++---------+---------+---------------------------------------+-----------------------------------------------------+
+| meta_id | post_id | meta_key                              | meta_value                                          |
++---------+---------+---------------------------------------+-----------------------------------------------------+
+|  106484 |   10808 | _edit_lock                            | 1654497884:1                                        |
+|  106604 |   10808 | _aioseo_title                         | NULL                                                |
+|  106605 |   10808 | _edit_last                            | 1                                                   |
+|  106620 |   10808 | _aioseo_description                   | sample description                                  |
+|  106621 |   10808 | _aioseo_keywords                      |                                                     |
+|  106622 |   10808 | _aioseo_og_title                      | NULL                                                |
+|  106623 |   10808 | _aioseo_og_description                |                                                     |
+|  106624 |   10808 | _aioseo_og_article_section            |                                                     |
+|  106625 |   10808 | _aioseo_og_article_tags               |                                                     |
+|  106626 |   10808 | _aioseo_twitter_title                 | NULL                                                |
+|  106627 |   10808 | _aioseo_twitter_description           | NULL                                                |
++---------+---------+---------------------------------------+-----------------------------------------------------+
+
+```
+フィールドの値は変わっているけど、HTMLには反映されていません。
+また、meta_valueをSQLで修正していても、管理画面から再度記事を更新すると、NULLに置き換わります。
+
+
+## 「wp_aioseo_posts」のフィールドへのUPDATE文
+本題に戻って、ここではSEOでメインとなる下記の2つをSQLでINSERTしてみます。
+- wp_aioseo_posts.title
+- wp_aioseo_posts.description
+
+```
+mysql> update wp_aioseo_posts set title = 'sample TITLE', description = 'sample description' where post_id = '10808';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+```
+
+```
+mysql> select title, description from wp_aioseo_posts where post_id = '10808' \G;
+*************************** 1. row ***************************
+      title: sample TITLE
+description: sample description
+1 row in set (0.00 sec)
+
+```
+
+## SQLでUPDATEした記事画面
 正しくHTMLが反映されています。
-![](https://storage.googleapis.com/zenn-user-upload/56d13485c10e-20220604.png)
 
-## SQLでINSERTした記事の管理画面
-公開設定やパーマリンクが正しく設定されています。
-![](https://storage.googleapis.com/zenn-user-upload/3b8f6e54e523-20220604.png)
+## SQLでUPDATEした記事の管理画面
 
 # まとめ
-ワンライナーでの記事投稿方法をまとめると下記です。
-1. 記事を作成する。
-2. INSERT文に下記4っを埋めてSQLファイルを作る。(他は基本的にサンプルと同じ値でOK)
-- post_content
-- post_title
-- post_excerpt
-- post_name
-3. mysqlコマンドの実行
-```
-mysql -u root -p -h localhost wordpress < INSERT.sql
-```
-4. 画面確認
+
 
 以上となります。
 
 ここまで読んでいただきましてありがとうございます。
-次回は、Docker上にあるWordPressに対してワンライナーで投稿する方法を解説します。
