@@ -189,12 +189,25 @@ description: sample description
 
 ## SQLでUPDATEした記事画面
 正しくHTMLが反映されています。
+![](https://storage.googleapis.com/zenn-user-upload/5c2f74372bcc-20220606.png)
 
 ## SQLでUPDATEした記事の管理画面
+Wordpress管理画面のAIOSEO設定で下記の項目にUPDATEした値が反映されています。
+- Snippet Preview
+- 投稿 Title
+- Meta Description
+![](https://storage.googleapis.com/zenn-user-upload/809eb1c07b11-20220606.png)
 
 # まとめ
-
+AIOSEOのフィールドをSQLで更新する方法をまとめると下記です。
+1. wp_aioseo_postsテーブルの更新したい要素をUPDATE文に追加する。
+2. mysql上でコマンド実行、または、msqlコマンドで実行
+```
+mysql -u root -p -h localhost wordpress < UPDATE.sql
+```
+4. 画面確認
 
 以上となります。
 
 ここまで読んでいただきましてありがとうございます。
+次回は、これらのSQLを使って一括インポートする処理を解説します。
