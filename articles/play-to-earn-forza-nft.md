@@ -1,3 +1,11 @@
+---
+title: "レーシングゲームで仮想通貨を稼ぐ！Forza-NFT"
+emoji: "🏎"
+type: "idea" # tech: 技術記事 / idea: アイデア
+topics: ["副業", "Play To Earn", "Forza", "NFT", "仮想通貨"]
+published: true
+---
+
 # Forza-NFTについて
 # Forzaとは？
 # 特徴
