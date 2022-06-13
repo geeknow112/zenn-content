@@ -35,8 +35,7 @@ https://dev.classmethod.jp/articles/general-availability-about-amazon-workspaces
 結果的に不要な措置でした。
 
 ### pingによる疎通確認
-WSPゲートウェイサーバー（アジアパシフィック (東京)	3.114.164.0/22）へ、
-下記の通り疎通できていました。
+WSPゲートウェイサーバー（アジアパシフィック (東京)	3.114.164.0/22）へ、下記の通り疎通できていました。
 ```
 PS C:> test-netconnection 3.114.164.1 -port 4195
 ComputerName     : 3.114.164.1
@@ -47,8 +46,7 @@ SourceAddress    : ***.***.***.***
 TcpTestSucceeded : True
 ```
 
-ヘルスチェックサーバー（アジアパシフィック (東京)	drp-nrt.amazonworkspaces.com 54.64.174.128）へ、
-下記の通り疎通できていました。
+ヘルスチェックサーバー（アジアパシフィック (東京)	drp-nrt.amazonworkspaces.com 54.64.174.128）へ、下記の通り疎通できていました。
 ```
 PS C:> Test-NetConnection -ComputerName drp-nrt.amazonworkspaces.com -port 4195
 
@@ -69,13 +67,11 @@ https://pc-karuma.net/windows-10-enable-disable-use-camera-app/
 カメラの設定をONにしましたが、カメラを認識せずでした。
 
 ###  レジストリのカメラ設定
-rededitでカメラ用の設定を追加しましたが、カメラを認識せず、
-結果的に不要な措置でした。
+rededitでカメラ用の設定を追加しましたが、カメラを認識せず、結果的に不要な措置でした。
 
 ## AD Connectorを利用している点
 AD Connectorを利用してActiveDirectoryと連携していることが原因かと思い、
-SimpleADでディレクトリを再作成して、Workspacesを起動してみましたが、
-カメラを認識せずでした。
+SimpleADでディレクトリを再作成して、Workspacesを起動してみましたが、カメラを認識せずでした。
 AD Connectorは特に関係なさそうです。
 
 ## リージョンを変えて実施
