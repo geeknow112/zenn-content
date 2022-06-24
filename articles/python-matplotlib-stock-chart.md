@@ -6,6 +6,23 @@ topics: ["python", "matplotlib", "chart", "投資", "分析", "株"]
 published: true
 ---
 
+# 株の基本的な売買戦略
+基本的にテクニカル分析重視で売買を行います。
+そのため、下記のようなニーズに応えるべく、分析チャートを作りました。
+- チャート上で現れるシグナルをつぶさに把握したい
+- 煩雑にならないように銘柄毎に1枚で把握したい
+- なんのシグナルだったか想起しやすいチャートがほしい
+
+## 目的
+これは株価を予測するものではなく、
+売買判断の際にこのチャートを見ながら売買することで、
+「最悪のタイミングで反対売買することを避ける」ことが目的です。
+
+## テクニカル分析についての参考
+テクニカル分析でのシグナルなどは下記の参考図書から引用させていただきました。
+詳しく知りたい方はリンクを貼っておきますのでこちらからどうぞ。
+hack-note.com
+
 [![日本郵船（9101）](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220622/9101.png =250x)*日本郵船（9101）*](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220622/9101.png)
 
 [![商船三井（9104）](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220622/9104.png =250x)*商船三井（9104）*](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220622/9104.png)
