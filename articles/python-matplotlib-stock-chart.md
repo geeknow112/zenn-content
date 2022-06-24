@@ -11,3 +11,6 @@ published: false
 [![商船三井（9104）](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220406/9104.png =250x)*商船三井（9104）*](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220406/9104.png)
 
 [![川崎汽船（9107）](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220406/9107.png =250x)*川崎汽船（9107）*](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220406/9107.png)
+
+
+[![川崎汽船（9107）](C:\Users\youre\Documents\git_repo\chart_analytics\charts\20220622/9107.png =250x)*川崎汽船（9107）*](C:\Users\youre\Documents\git_repo\chart_analytics\charts\20220622/9107.png)
