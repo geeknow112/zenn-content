@@ -19,12 +19,22 @@ published: true
 「最悪のタイミングで反対売買することを避ける」ことが目的です。
 
 ## テクニカル分析についての参考
-テクニカル分析でのシグナルなどは下記の参考図書から引用させていただきました。
+テクニカル分析でのシグナルなどは下記の書籍から引用させていただきました。
 詳しく知りたい方はリンクを貼っておきますのでこちらからどうぞ。
-hack-note.com
+https://hack-note.com/
 
-[![日本郵船（9101）](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220622/9101.png =250x)*日本郵船（9101）*](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220622/9101.png)
 
-[![商船三井（9104）](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220622/9104.png =250x)*商船三井（9104）*](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220622/9104.png)
+# 海運株のチャートで解説
+個人的に、海運株のチャートがいちばん指標通りに動いているように見えるので、解説にはこの銘柄を使用します。
+[![日本郵船（9101）](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220623/9101.png =250x)*日本郵船（9101）*](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220623/9101.png)
 
-[![川崎汽船（9107）](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220622/9107.png =250x)*川崎汽船（9107）*](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220622/9107.png)
+[![商船三井（9104）](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220623/9104.png =250x)*商船三井（9104）*](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220623/9104.png)
+
+[![川崎汽船（9107）](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220623/9107.png =250x)*川崎汽船（9107）*](https://trident-capital-strage.s3.ap-northeast-1.amazonaws.com/charts/20220623/9107.png)
+
+# 用語、シグナルの解説
+- MA: 移動平均線
+- GC: ゴールデンクロス
+- DC: デッドクロス
+- GC_5_20: 5日MAが20日MAをゴールデンクロス
+- DC_5_20: 5日MAが20日MAをデッドクロス
