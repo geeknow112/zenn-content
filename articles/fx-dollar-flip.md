@@ -3,7 +3,7 @@ title: "ドル転して米ドル建のETFを購入する"
 emoji: "💰"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["米ドル", "ドル円", "FX"]
-published: false
+published: true
 ---
 
 # ドル転とは？
