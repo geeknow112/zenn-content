@@ -1,5 +1,5 @@
 ---
-title: "AWS WSP（Workspaces Streaming Protocol）が利用できずあがいた件"
+title: "ドル転"
 emoji: "🔥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["AWS", "WSP", "Workspaces"]
