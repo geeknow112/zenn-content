@@ -3,7 +3,7 @@ title: "フリーランスエンジニアの案件獲得についての考察"
 emoji: "💰"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["フリーランス", "エンジニア", "案件"]
-image: [https://www.google.com/url?sa=i&url=https%3A%2F%2Fmamaworks.jp%2Fcolumn%2F%3Fp%3D8181&psig=AOvVaw2fESMqNzN1ZROTyiHPv6Rn&ust=1681529523227000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCNCQ_um3qP4CFQAAAAAdAAAAABAF](https://mamaworks.jp/column/wp-content/uploads/2020/11/94ed160662be198949535a112047e9b4-1.jpg)
+image: https://mamaworks.jp/column/wp-content/uploads/2020/11/94ed160662be198949535a112047e9b4-1.jpg
 published: true
 ---
 
