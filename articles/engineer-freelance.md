@@ -6,6 +6,11 @@ topics: ["フリーランス", "エンジニア", "案件"]
 image: https://mamaworks.jp/column/wp-content/uploads/2020/11/94ed160662be198949535a112047e9b4-1.jpg
 published: true
 ---
+```tweetcard
+title: Zennで学ぶプログラミング
+description: Zennは、プログラミングに関する記事を多数公開しています。初心者から上級者まで、幅広い層に役立つ情報が満載です。
+image: [https://example.com/image.png](https://mamaworks.jp/column/wp-content/uploads/2020/11/94ed160662be198949535a112047e9b4-1.jpg)
+``` 
 
 フリーランスエンジニアの方にとって、案件獲得は非常に重要な課題です。特に、初めてフリーランスとして活動を始める場合は、どのようにして案件を獲得するかが大きな問題となるでしょう。そこで、本記事では、フリーランスエンジニアが案件を獲得するための方法について解説します。
 
