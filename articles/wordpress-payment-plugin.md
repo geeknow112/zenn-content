@@ -36,7 +36,7 @@ published: true
 
 以下に、WordPressで使える代表的な決済プラグインをご紹介します。
 
-### WooCommerce
+1. WooCommerce
 
 WooCommerceは、WordPressのプラグインとして提供されている、決済機能を含むECサイト構築用のプラットフォームです。カスタマイズ性が高く、多様な決済方法に対応しています。また、導入が簡単で、WordPress初心者でも扱いやすい点が特徴です。
 
