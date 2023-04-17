@@ -43,18 +43,18 @@ Dockerを使用することで、環境構築や管理が簡単になります�
 DockerとDocker Composeがインストールできたら、以下の手順に従って、WordPressの設定を行います。
 
 1. 作業用のディレクトリを作成します。
-   ````
+   ```
    $ mkdir wordpress
    $ cd wordpress
    ```
 
 2. `docker-compose.yml` ファイルを作成します。
-   ````
+   ```
    $ touch docker-compose.yml
    ```
 
 3. 以下の内容を `docker-compose.yml` に記述します。
-   ````
+   ```
    version: '3'
    services:
      db:
@@ -79,12 +79,12 @@ DockerとDocker Composeがインストールできたら、以下の手順に従
          WORDPRESS_DB_HOST: db:3306
          WORDPRESS_DB_USER: wordpress
          WORDPRESS_DB_PASSWORD: wordpress
-volumes:
-    db_data:
+     volumes:
+       db_data:
    ```
 
 4. 以下のコマンドを実行して、コンテナの起動を行います。
-   ````
+   ```
    $ docker-compose up -d
    ```
 
