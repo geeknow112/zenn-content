@@ -7,8 +7,6 @@ image:
 published: true
 ---
 
-![WordPressバージョン確認](https://example.com/wp-version.jpg)
-
 # はじめに
 こんにちは。今回は、WordPress初心者に向けて、WordPressのバージョン確認方法について解説します。WordPressを利用する上で、常に最新バージョンを利用することが重要ですが、そのためにはまず現在のバージョンを確認する必要があります。初心者の方でも簡単に確認できる方法をご紹介します。
 
