@@ -1,6 +1,6 @@
 ---
 title: "Github Pagesの設定方法 for 初心者"
-emoji: "🌐"
+emoji: "😺"
 type: "tech"
 topics: ["github", "pages"]
 published: true
