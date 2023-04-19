@@ -1,6 +1,6 @@
 ---
 title: "Github CLIで簡単にリポジトリを作成する方法"
-emoji: "🐱‍"
+emoji: "😺"
 type: "tech"
 topics: ["github", "cli"]
 published: true
