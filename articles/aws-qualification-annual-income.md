@@ -1,7 +1,7 @@
 ---
 title: "AWS資格と年収について知ろう"
 emoji: "💼"
-type: "tech"
+type: "idea"
 topics: ["aws", "資格", "年収"]
 published: true
 ---
