@@ -1,6 +1,6 @@
 ---
 title: "AWS Quicksight入門ガイド"
-emoji: "💻"
+emoji: "📊"
 type: "tech"
 topics: ["aws", "quicksight"]
 published: true
@@ -64,7 +64,7 @@ AWS Quicksightでは、複数のビジュアル分析を組み合わせて、ダ
 
 以下のSQLクエリは、AWS Quicksightで利用できるサンプルコードの一例です。
 
-```
+```sql
 SELECT
   customer_name,
   SUM(order_total) as total
@@ -82,7 +82,7 @@ ORDER BY
 
 以下のコードは、AWS Quicksightで利用できるグラフの作成例です。
 
-```
+```json
 {
   "type": "bar",
   "options": {
