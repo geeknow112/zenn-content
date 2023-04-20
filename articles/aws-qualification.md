@@ -1,7 +1,7 @@
 ---
 title: "AWS資格の難易度について"
 emoji: "🔑"
-type: "tech"
+type: "idea"
 topics: ["aws", "資格", "難易度"]
 published: true
 ---
