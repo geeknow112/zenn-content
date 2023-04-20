@@ -1,7 +1,7 @@
 ---
 title: "AWS転職の難易度と対策について"
 emoji: "🌐"
-type: "tech"
+type: "idea"
 topics: ["AWS", "転職", "初心者"]
 published: true
 ---
