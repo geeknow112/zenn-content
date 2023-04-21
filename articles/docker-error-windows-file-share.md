@@ -49,41 +49,54 @@ WindowsでDocker Composeを使用してファイル共有を設定する場合�
 
 ## 4. 解決
 
-以下は、Docker Composeファイルの例です。このファイルを使用することで、DockerでMySQLデータベースを実行し、WindowsホストのファイルシステムにあるSQLファイルを実行することができます。
+Windowsの場合、ホストマシン上のファイルシステムにアクセスするには、Dockerのボリュームマウント機能を使用する必要があります。以下は、Windowsの場合にWordPressデータを保存する方法の例です。
 
-```yaml
-version: '3.9'
+1. 以前のWordPressデータを保存しているホストマシン上にデータを配置します。例えば、`C:\path\to\wordpress\data`に保存しているとします。
+2. Docker Composeファイルに、WordPressデータを保存するためのボリュームを定義します。以下は、`wordpress_data`という名前のボリュームを定義する例です。
 
-services:
-  db:
-    image: mysql:5.7
-    volumes:
-      - db_data:/var/lib/mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: example
+   ````yaml
+   version: '3.9'
+   
+   services:
+     db:
+       image: mysql:5.7
+       volumes:
+         - db_data:/var/lib/mysql
+       restart: always
+       environment:
+         MYSQL_ROOT_PASSWORD: example
+   
+     wordpress:
+       depends_on:
+         - db
+       image: wordpress:latest
+       volumes:
+         - type: bind
+           source: C:\path\to\wordpress\data
+           target: /var/www/html
+       ports:
+         - "8000:80"
+       restart: always
+       environment:
+         WORDPRESS_DB_HOST: db:3306
+         WORDPRESS_DB_USER: root
+         WORDPRESS_DB_PASSWORD: example
+         WORDPRESS_DB_NAME: wordpress
+   
+   volumes:
+     db_data:
+   ```
 
-  wordpress:
-    depends_on:
-      - db
-    image: wordpress:latest
-    volumes:
-      - type: bind
-        source: C:\path\to\wordpress\data
-        target: /var/www/html
-    ports:
-      - "8000:80"
-    restart: always
-    environment:
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: root
-      WORDPRESS_DB_PASSWORD: example
-      WORDPRESS_DB_NAME: wordpress
+   上記の例では、WordPressサービスの`volumes`に、Windowsの`C:\path\to\wordpress\data`ディレクトリを`/var/www/html`にマウントしています。`type: bind`を指定することで、ホストマシン上のファイルシステムにアクセスすることができます。
 
-volumes:
-  db_data:
-```
+3. Docker Composeコマンドを実行して、WordPressコンテナを起動します。
 
-このファイルでは、Docker Composeを使用してMySQLデータベースを実行し、Windowsホストの`/c/Users/{user_name}/project/sql`フォルダーをコンテナ内の`/docker-entrypoint-initdb.d`フォルダーにマウントしています。コンテナが起動すると、Dockerは自動的に`/docker-entrypoint-initdb.d`フォルダー内のSQLファイルを実行します。
+   ````bash
+   docker-compose up -d
+   ```
+
+   これにより、以前のWordPressデータを利用して、最新版のWordPressが起動されます。
+
+この手順に従って実行すれば、Windowsの場合でも、以前のWordPressデータを利用して、最新版のWordPressを起動することができます。
 
 以上で、WindowsでのDocker Composeファイル共有エラーの解決方法を説明しました。これらの手順に従って、ファイル共有を正しく構成し、Docker Composeを使用して開発を続けてください。
