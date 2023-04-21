@@ -85,7 +85,7 @@ services:
 
 volumes:
   db_data:
-```
+````
 
 上記の例では、WordPressサービスの`volumes`に、Windowsの`C:\path\to\wordpress\data`ディレクトリを`/var/www/html`にマウントしています。`type: bind`を指定することで、ホストマシン上のファイルシステムにアクセスすることができます。
 
@@ -93,7 +93,7 @@ volumes:
 
 ````bash
 docker-compose up -d
-```
+````
 
 これにより、以前のWordPressデータを利用して、最新版のWordPressが起動されます。
 
