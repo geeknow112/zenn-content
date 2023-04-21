@@ -17,7 +17,7 @@ WindowsでDocker Composeを使用する場合、Docker Desktopの設定画面か
 Docker Composeを使用してWindows上でファイル共有を設定しようとすると、以下のようなエラーが表示される場合があります。
 
 ```
-ERROR: for {service_name}  Cannot create container for service {service_name}: failed to mount local volume: mount C:/Users/{user_name}/project:/app/{volume_name} : drive is not shared
+Error response from daemon: user declined directory sharing C:/Users/{user_name}/project:/app/{volume_name}
 ```
 
 このエラーは、Dockerが指定されたフォルダーをマウントできなかったことを示しています。Windowsのファイル共有機能が正しく構成されていないため、Dockerがファイルにアクセスできない状態になっている可能性があります。
@@ -52,16 +52,36 @@ WindowsでDocker Composeを使用してファイル共有を設定する場合�
 以下は、Docker Composeファイルの例です。このファイルを使用することで、DockerでMySQLデータベースを実行し、WindowsホストのファイルシステムにあるSQLファイルを実行することができます。
 
 ```yaml
-version: '3.8'
+version: '3.9'
+
 services:
   db:
-    image: mysql:8.0
-    command: --default-authentication-plugin=mysql_native_password
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_ROOT_PASSWORD: example
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
     volumes:
-      - /c/Users/{user_name}/project/sql:/docker-entrypoint-initdb.d
+      - type: bind
+        source: C:\path\to\wordpress\data
+        target: /var/www/html
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: example
+      WORDPRESS_DB_NAME: wordpress
+
+volumes:
+  db_data:
 ```
 
 このファイルでは、Docker Composeを使用してMySQLデータベースを実行し、Windowsホストの`/c/Users/{user_name}/project/sql`フォルダーをコンテナ内の`/docker-entrypoint-initdb.d`フォルダーにマウントしています。コンテナが起動すると、Dockerは自動的に`/docker-entrypoint-initdb.d`フォルダー内のSQLファイルを実行します。
