@@ -54,46 +54,46 @@ Windowsの場合、ホストマシン上のファイルシステムにアクセ�
 1. 以前のWordPressデータを保存しているホストマシン上にデータを配置します。例えば、`C:\path\to\wordpress\data`に保存しているとします。
 2. Docker Composeファイルに、WordPressデータを保存するためのボリュームを定義します。以下は、`wordpress_data`という名前のボリュームを定義する例です。
 
-   ````yaml
-   version: '3.9'
-   
-   services:
-     db:
-       image: mysql:5.7
-       volumes:
-         - db_data:/var/lib/mysql
-       restart: always
-       environment:
-         MYSQL_ROOT_PASSWORD: example
-   
-     wordpress:
-       depends_on:
-         - db
-       image: wordpress:latest
-       volumes:
-         - type: bind
-           source: C:\path\to\wordpress\data
-           target: /var/www/html
-       ports:
-         - "8000:80"
-       restart: always
-       environment:
-         WORDPRESS_DB_HOST: db:3306
-         WORDPRESS_DB_USER: root
-         WORDPRESS_DB_PASSWORD: example
-         WORDPRESS_DB_NAME: wordpress
-   
-   volumes:
-     db_data:
-   ```
+````yaml
+version: '3.9'
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    volumes:
+      - type: bind
+        source: C:\path\to\wordpress\data
+        target: /var/www/html
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: example
+      WORDPRESS_DB_NAME: wordpress
+
+volumes:
+  db_data:
+```
 
    上記の例では、WordPressサービスの`volumes`に、Windowsの`C:\path\to\wordpress\data`ディレクトリを`/var/www/html`にマウントしています。`type: bind`を指定することで、ホストマシン上のファイルシステムにアクセスすることができます。
 
 3. Docker Composeコマンドを実行して、WordPressコンテナを起動します。
 
-   ````bash
-   docker-compose up -d
-   ```
+````bash
+docker-compose up -d
+```
 
    これにより、以前のWordPressデータを利用して、最新版のWordPressが起動されます。
 
