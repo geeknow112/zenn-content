@@ -1,6 +1,6 @@
 ---
 title: "Docker Composeを使用してGitHubからソースコードをクローンする方法"
-emoji: "🐳📦👨‍💻"
+emoji: "🐳"
 type: "tech"
 topics: ["GitHub", "clone", "Docker", "Docker Compose"]
 published: true
