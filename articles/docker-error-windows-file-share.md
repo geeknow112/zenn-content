@@ -87,7 +87,7 @@ volumes:
   db_data:
 ```
 
-   上記の例では、WordPressサービスの`volumes`に、Windowsの`C:\path\to\wordpress\data`ディレクトリを`/var/www/html`にマウントしています。`type: bind`を指定することで、ホストマシン上のファイルシステムにアクセスすることができます。
+上記の例では、WordPressサービスの`volumes`に、Windowsの`C:\path\to\wordpress\data`ディレクトリを`/var/www/html`にマウントしています。`type: bind`を指定することで、ホストマシン上のファイルシステムにアクセスすることができます。
 
 3. Docker Composeコマンドを実行して、WordPressコンテナを起動します。
 
@@ -95,7 +95,7 @@ volumes:
 docker-compose up -d
 ```
 
-   これにより、以前のWordPressデータを利用して、最新版のWordPressが起動されます。
+これにより、以前のWordPressデータを利用して、最新版のWordPressが起動されます。
 
 この手順に従って実行すれば、Windowsの場合でも、以前のWordPressデータを利用して、最新版のWordPressを起動することができます。
 
