@@ -63,3 +63,9 @@ EXIT;
 - HTTP（ポート80）とHTTPS（ポート443）の入力を許可する規則を追加します。
 
 以上の手順で、最安でAWSでWordpressを使うことができます。ただし、この方法は小規模なサイト向けであり、高トラフィックのサイトには適していません。より高度な機能を必要とする場合は、AWSの他のサービス（例えばEC2やRDS）を使用することを検討することをお勧めします。
+
+## その他のお悩み
+他のお悩みにも下記の記事で回答しています。
+>LightsailでもEC2みたいにAuto Scalingできますか？
+https://zenn.dev/gk12/articles/aws-lightsail-auto-scaling
+
