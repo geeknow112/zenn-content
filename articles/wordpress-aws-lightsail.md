@@ -67,5 +67,6 @@ EXIT;
 ## その他のお悩み
 他のお悩みにも下記の記事で回答しています。
 >LightsailでもEC2みたいにAuto Scalingできますか？
+
 https://zenn.dev/gk12/articles/aws-lightsail-auto-scaling
 
