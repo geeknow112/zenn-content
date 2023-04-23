@@ -6,3 +6,4 @@ topics: ["wordpress", "aws", "lightsail"]
 published: true
 ---
 
+>AWS で最安でWordpressを使う方法を教えて
