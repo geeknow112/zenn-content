@@ -1,5 +1,5 @@
 ---
-title: "LightsailとRDSの最小構成で、トラフィックが、1,000PV/月間、10,000PV/月間、100,000PV/月間の場合のコスト比較を試算してみた"
+title: "LightsailとRDSで月間PV数別のコスト比較"
 emoji: "💰"
 type: "tech"
 topics: ["AWS", "RDS", "Lightsail", "コスト比較"]
