@@ -76,5 +76,5 @@ https://zenn.dev/gk12/articles/aws-lightsail-to-ec2
 ## AWS LightsailでWordpressを使う際に、データベースはどれがいいんだろう？
 https://zenn.dev/gk12/articles/aws-lightsail-with-database
 
-### Amazon Aurora ServerlessとRDSの比較：どちらを選ぶべきですか？
+## Amazon Aurora ServerlessとRDSの比較：どちらを選ぶべきですか？
 https://zenn.dev/gk12/articles/aws-comp-rds-aurora-serverless
