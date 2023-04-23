@@ -70,3 +70,6 @@ EXIT;
 
 https://zenn.dev/gk12/articles/aws-lightsail-auto-scaling
 
+>高トラフィック時にがくるようになったら、AWS Lightsailから通常のEC2に移行はどうやればいいですか？
+
+https://zenn.dev/gk12/articles/aws-lightsail-to-ec2
