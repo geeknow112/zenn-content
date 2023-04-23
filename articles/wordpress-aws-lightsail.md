@@ -78,3 +78,9 @@ https://zenn.dev/gk12/articles/aws-lightsail-with-database
 
 ## Amazon Aurora ServerlessとRDSの比較：どちらを選ぶべきですか？
 https://zenn.dev/gk12/articles/aws-comp-rds-aurora-serverless
+
+## LightsailとRDSで月間PV数別のコストの概算がしりたい。
+https://zenn.dev/gk12/articles/aws-lightsail-comp-cost
+
+## AWS LightsailでもEC2みたいに開発環境は作れるの？
+https://zenn.dev/gk12/articles/aws-lightsail-development-environment
