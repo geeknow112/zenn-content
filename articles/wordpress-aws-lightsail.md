@@ -64,16 +64,14 @@ EXIT;
 
 以上の手順で、最安でAWSでWordpressを使うことができます。ただし、この方法は小規模なサイト向けであり、高トラフィックのサイトには適していません。より高度な機能を必要とする場合は、AWSの他のサービス（例えばEC2やRDS）を使用することを検討することをお勧めします。
 
-## その他のお悩み
+# その他のお悩み
 他のお悩みにも下記の記事で回答しています。
->LightsailでもEC2みたいにAuto Scalingできますか？
 
+## LightsailでもEC2みたいにAuto Scalingできますか？
 https://zenn.dev/gk12/articles/aws-lightsail-auto-scaling
 
->高トラフィック時にがくるようになったら、AWS Lightsailから通常のEC2に移行はどうやればいいですか？
-
+## 高トラフィック時にがくるようになったら、AWS Lightsailから通常のEC2に移行はどうやればいいですか？
 https://zenn.dev/gk12/articles/aws-lightsail-to-ec2
 
->AWS LightsailでWordpressを使う際に、データベースはどれがいいんだろう？
-
+## AWS LightsailでWordpressを使う際に、データベースはどれがいいんだろう？
 https://zenn.dev/gk12/articles/aws-lightsail-with-database
