@@ -68,7 +68,7 @@ Windows Terminalでは、テキストの色や背景色を変更することが�
         "name": "My Color Scheme",
         "background": "#0C0C0C",
         "black": "#0C0C0C",
-        "blue": "#003
+        "blue": "#003"
     }
 ]
 ```
