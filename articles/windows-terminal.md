@@ -165,5 +165,6 @@ Windows Terminalでは、フォントを変更することができます。フ�
 本記事では、Windows Terminalの基本的な使い方やカスタマイズ方法について解説しました。Windows Terminalは、オープンソースであり、様々な設定が可能です。初めて使用する人でも、この記事を参考にして自分好みのターミナル環境を構築してみてください。
 
 参考記事：
+https://www.kimoton.com/entry/20201011/1602424175
 - [Windows Terminal Documentation](https://docs.microsoft.com/en-us/windows/terminal/)
 - [Windows Terminal Tips and Tricks](https://devblogs.microsoft.com/commandline/windows-terminal-tips-and-tricks/)
