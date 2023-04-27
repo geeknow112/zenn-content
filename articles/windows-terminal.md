@@ -68,7 +68,12 @@ Windows Terminalでは、テキストの色や背景色を変更することが�
         "name": "My Color Scheme",
         "background": "#0C0C0C",
         "black": "#0C0C0C",
-        "blue": "#003:::message alert
+        "blue": "#003
+    }
+]
+```
+
+:::message alert
 Windows Terminalの設定ファイルである`settings.json`を変更する際は、誤った設定値を入力しないように注意してください。誤った設定値を入力すると、Windows Terminalが正常に動作しなくなる場合があります。
 :::
 
