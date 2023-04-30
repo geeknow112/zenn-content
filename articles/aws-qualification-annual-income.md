@@ -5,6 +5,7 @@ type: "idea"
 topics: ["aws", "資格", "年収"]
 published: true
 ---
+![AWS資格と年収について知ろう](https://storage.googleapis.com/zenn-user-upload/02b9de6e0afa-20230430.jpg)
 
 こんにちは。今回は、AWS初心者に向けて、AWSの資格についてと、それによる年収アップについてご紹介します。
 
