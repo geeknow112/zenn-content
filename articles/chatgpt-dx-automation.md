@@ -1,9 +1,9 @@
 ---
-TITLE: "ChatGPTを使って、自社のサービスを自動化しよう！"
-EMOJI: "🤖"
-TYPE: "TECH"
-TOPICS: ["ChatGPT", "OPENAI", "自動化"]
-PUBLISHED: TRUE
+title: "ChatGPTを使って、自社のサービスを自動化しよう！"
+emoji: "🤖"
+type: "tech"
+topics: ["chatGPT", "OpenAI", "自動化"]
+published: true
 ---
 
 こんにちは。今回は、ChatGPTについて初心者エンジニアに向けて、自社のサービスを自動化する方法についてお伝えします。
