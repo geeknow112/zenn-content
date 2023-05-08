@@ -3,7 +3,7 @@ title: "ChatGTPがもたらす自然言語処理技術の進化について知�
 emoji: "🤖"
 type: "TECH"
 topics: ["ChatGTP", "OPENAI", "自然言語処理"]
-published: ture
+published: true
 ---
 
 こんにちは。今回は、ChatGTPについて初心者エンジニアに向けて、自然言語処理技術の進化について解説します。
