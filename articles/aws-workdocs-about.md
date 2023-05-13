@@ -39,7 +39,7 @@ aws workdocsは、5GBまでは無料で利用することができます。一�
 以上が、aws workdocsと類似サービスの料金比較についての解説でした。aws workdocsは、複数人でのドキュメント管理やawsとの連携に優れたサービスであるため、awsを利用する方にはおすすめです。
 
 ## AWSを学ぶにはこちらもおススメ
-https://hack-note.com/investigation/preread-apply-school/
+https://hack-note.com/programming-schools/
 
 参考url：
 - [amazon web services（aws）とネットワーク負荷分散](https://www.ntts.co.jp/column/amazon-web-service-network-load-balancing.html)
