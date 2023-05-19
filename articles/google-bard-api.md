@@ -14,6 +14,9 @@ google bardとは、googleが提供している自然言語処理のプラット
 
 しかし、初めてapiを利用する方にとっては、細かい設定や手順が複雑に感じられるかもしれません。そこで、本記事では、google bard apiを利用する手順を詳細に解説します。
 
+### chatGPTのAPIも使いたい場合、こちらをどうぞ
+https://hack-note.com/ai/chatgpt-use-api-python/
+
 ## google bard api 使い方 python
 
 ### 1. google cloud platformでプロジェクトを作成する
