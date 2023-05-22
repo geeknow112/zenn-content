@@ -65,3 +65,15 @@ ChatGPTを用いて自動生成した文章が、必ずしも正確な情報を�
 - [ChatGPTがなぜ話題になっているのか？そのメカニズムを徹底解説](https://ainow.ai/2020/01/29/182390/)
 - [チャットボットの作り方 – 深層学習 Chatbot 構築チュートリアル](https://qiita.com/halhorn/items/f3a934575adc1ebc2229)
 - [Transformers documentation](https://huggingface.co/transformers/)
+
+## AIでスキルを強化
+bardやchatGPTを使ってて思うのは、まだ仕事が奪われる段階ではないってことです。
+むしろAIを使ってスキルを強化していけるという思いが強くなりました。
+今まで手間だった簡単なプログラミングはAIに任せて、
+より高度なものをやったり、ディレクションしたりが、人間の仕事になると思います。
+
+AIでいかに単純作業を効率化していけるかが技術力の分岐点になるので、
+今のうちに基礎固めにプログラミングスクールを使ってみるのもありだと思います。
+参考に載せておきます。
+https://hack-note.com/programming-schools/#toc13
+
