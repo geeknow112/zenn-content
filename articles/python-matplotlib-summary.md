@@ -46,3 +46,14 @@ https://hack-note.com/infra/docker-about/
 - [text](https://hack-note.com/python-matplotlib-arrow)
 - [text](https://hack-note.com/python-matplotlib-xlabel)
 - [text](https://hack-note.com/python-matplotlib-cm)
+
+## データサイエンティストスクール 無料部分あります
+PythonやRなどのプログラミングを学ぶなら、
+さらに統計分野を学習してデータサイエンティストを目指すのがおすすめ！
+
+ディープラーニングやビックデータ分析などの高額システム案件の受注にも有利になります。
+
+システム開発より、分析がやりたい方向けですが、下記載せておきます。
+
+https://hack-note.com/programming-schools/#toc17
+

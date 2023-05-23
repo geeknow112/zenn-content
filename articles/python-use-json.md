@@ -80,3 +80,14 @@ Pythonでは、JSONを扱うための標準ライブラリが用意されてい�
 参考にしたブログ記事:
 - [PythonでJSONを扱う方法](https://www.atmarkit.co.jp/ait/articles/1910/04/news028.html)
 - [PythonでJSONデータを取得する方法](https://qiita.com/Taiga__/items/5dcd4e5e5e9e5837b514)
+
+## データサイエンティストスクール 無料部分あります
+PythonやRなどのプログラミングを学ぶなら、
+さらに統計分野を学習してデータサイエンティストを目指すのがおすすめ！
+
+ディープラーニングやビックデータ分析などの高額システム案件の受注にも有利になります。
+
+システム開発より、分析がやりたい方向けですが、下記載せておきます。
+
+https://hack-note.com/programming-schools/#toc17
+ 
