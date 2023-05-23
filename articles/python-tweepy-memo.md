@@ -66,3 +66,14 @@ http://hack-note.com/monetize/books-sns/
 https://stock.hack-note.com/stock-analyze/nikkei225-4183-mitsuikagaku-20210405/
 
 vim ./static_sa/category/stock-analyze/9107-kawasakikisen/index.html
+
+## データサイエンティストスクール 無料部分あります
+PythonやRなどのプログラミングを学ぶなら、
+さらに統計分野を学習してデータサイエンティストを目指すのがおすすめ！
+
+ディープラーニングやビックデータ分析などの高額システム案件の受注にも有利になります。
+
+システム開発より、分析がやりたい方向けですが、下記載せておきます。
+
+https://hack-note.com/programming-schools/#toc17
+
