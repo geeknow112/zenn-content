@@ -84,3 +84,15 @@ https://zenn.dev/gk12/articles/aws-lightsail-comp-cost
 
 ## AWS LightsailでもEC2みたいに開発環境は作れるの？
 https://zenn.dev/gk12/articles/aws-lightsail-development-environment
+
+## Wordpress案件を実際に取っていく方法をまとめました
+プロのエンジニアになるには、独学を続けるより案件を実際に受注した方が近道です。
+フリーランスエンジニアとしてやっていくにはどこかのタイミングで
+案件を獲っていかないといけません。
+最初から全てうまくいくことは稀でしょう。
+となると、うまくいかないことを前提として最速で案件を回していった方が効率的です。
+
+スキルを磨く勉強はほどほどにして、いかにして案件を獲っていくかを考えましょう。
+
+https://hack-note.com/programming/engineer-freelance-wordpress/
+

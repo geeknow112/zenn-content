@@ -62,3 +62,15 @@ WordPressのデータベースのテーブルを直接編集することは、�
 - [WordPressのテーブル定義について理解する - Qiita](https://qiita.com/daikiojm/items/3a9aa5e9b14c4c5a3ff1)
 - [WordPressのDBを直接操作する方法 - Qiita](https://qiita.com/tsuboko/items/2d2b9c4b8f54d1b2a50f)
 
+
+## Wordpress案件を実際に取っていく方法をまとめました
+プロのエンジニアになるには、独学を続けるより案件を実際に受注した方が近道です。
+フリーランスエンジニアとしてやっていくにはどこかのタイミングで
+案件を獲っていかないといけません。
+最初から全てうまくいくことは稀でしょう。
+となると、うまくいかないことを前提として最速で案件を回していった方が効率的です。
+
+スキルを磨く勉強はほどほどにして、いかにして案件を獲っていくかを考えましょう。
+
+https://hack-note.com/programming/engineer-freelance-wordpress/
+

@@ -44,3 +44,15 @@ media cloudは、aws s3だけでなく、google cloud storageやmicrosoft azure�
 - [wordpress画像をamazon s3で管理する方法](https://globaleffect.me/how-to-upload-wordpress-images-to-amazon-s3/)
 - [wordpressとaws s3を連携させてサイト表示速度をupしよう！](https://www.tt2-works.com/wordpress-aws-s3/) 
 
+
+## Wordpress案件を実際に取っていく方法をまとめました
+プロのエンジニアになるには、独学を続けるより案件を実際に受注した方が近道です。
+フリーランスエンジニアとしてやっていくにはどこかのタイミングで
+案件を獲っていかないといけません。
+最初から全てうまくいくことは稀でしょう。
+となると、うまくいかないことを前提として最速で案件を回していった方が効率的です。
+
+スキルを磨く勉強はほどほどにして、いかにして案件を獲っていくかを考えましょう。
+
+https://hack-note.com/programming/engineer-freelance-wordpress/
+
