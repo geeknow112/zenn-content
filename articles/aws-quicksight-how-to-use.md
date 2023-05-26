@@ -12,7 +12,7 @@ awsとは、amazon web servicesの略で、amazonが提供するクラウドコ�
 
 本記事では、aws quicksightの基本的な使い方について解説します。
 
-##【aws quicksightの基本的な使い方】
+## 【aws quicksightの基本的な使い方】
 
 aws quicksightは、awsのコンソールからアクセスすることができます。まずは、awsのアカウントを作成し、ログインしてください。
 
@@ -28,15 +28,15 @@ aws quicksightは、他のawsサービスとの連携も可能です。たとえ
 
 以上が、aws quicksightの基本的な使い方についての紹介です。aws quicksightは簡単に利用できるbiツールなので、ぜひ使ってみてください。
 
-##【注意点】
+## 【注意点】
 
 aws quicksightを利用する前に、awsの料金設定について理解しておく必要があります。quicksightは、アクティブユーザー数に応じた課金方式が用いられています。また、データソースによっては、データの転送料金がかかる場合があります。
 
-##【まとめ】
+## 【まとめ】
 
 今回は、aws quicksightについて初心者エンジニア向けに基本的な使い方を紹介しました。aws quicksightは、簡単にデータ分析を行うことができるbiツールです。aws quicksightを利用して、自社のビジネスに活かせるデータ分析を行ってみましょう。
 
-##【参考文献】
+## 【参考文献】
 
 「awsサービス」https://aws.amazon.com/jp/products/ にアクセス (2021.10.15)
 「awsでbi環境の構築を自動化」https://blog.serverworks.co.jp/aws/2019/10/22/aws-bi/ にアクセス (2021.10.15) 
